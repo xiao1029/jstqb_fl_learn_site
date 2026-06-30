@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1.2 なぜテストが必要か?｜JSTQB FL 学習帳</title>
+<meta name="description" content="テストがプロジェクトの成功にどう貢献するか、QAとの違い、エラー・欠陥・故障の関係を学ぶ。">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="topbar"><div class="topbar-inner">
+<a class="brand" href="/"><span class="mark">📘</span><span>JSTQB FL 学習帳<small>FOUNDATION LEVEL STUDY GUIDE</small></span></a>
+<nav class="nav">
+<div class="nav-item">
+<a class="nav-link" href="/chapter1/">第1章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter1/1-1-what-is-testing/"><span>テストとは何か?</span><span class="code">1.1</span></a>
+<a href="/chapter1/1-2-why-testing/"><span>なぜテストが必要か?</span><span class="code">1.2</span></a>
+<a href="/chapter1/1-3-testing-principles/"><span>テストの原則</span><span class="code">1.3</span></a>
+<a href="/chapter1/1-4-test-activities/"><span>テスト活動、テストウェア、そして役割</span><span class="code">1.4</span></a>
+<a href="/chapter1/1-5-essential-skills/"><span>テストに必要不可欠なスキルとよい実践例</span><span class="code">1.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter2/">第2章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter2/2-1-sdlc-context/"><span>コンテキストに応じたソフトウェア開発ライフサイクルでのテスト</span><span class="code">2.1</span></a>
+<a href="/chapter2/2-2-test-levels-types/"><span>テストレベルとテストタイプ</span><span class="code">2.2</span></a>
+<a href="/chapter2/2-3-maintenance-testing/"><span>メンテナンス(保守)テスト</span><span class="code">2.3</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter3/">第3章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter3/3-1-static-testing-basics/"><span>静的テストの基本</span><span class="code">3.1</span></a>
+<a href="/chapter3/3-2-review-process/"><span>フィードバックとレビュープロセス</span><span class="code">3.2</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter4/">第4章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter4/4-1-technique-overview/"><span>テスト技法の概要</span><span class="code">4.1</span></a>
+<a href="/chapter4/4-2-black-box/"><span>ブラックボックステスト技法</span><span class="code">4.2</span></a>
+<a href="/chapter4/4-3-white-box/"><span>ホワイトボックステスト技法</span><span class="code">4.3</span></a>
+<a href="/chapter4/4-4-experience-based/"><span>経験ベースのテスト技法</span><span class="code">4.4</span></a>
+<a href="/chapter4/4-5-collaboration-based/"><span>コラボレーションベースのテストアプローチ</span><span class="code">4.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter5/">第5章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter5/5-1-test-planning/"><span>テスト計画</span><span class="code">5.1</span></a>
+<a href="/chapter5/5-2-risk-management/"><span>リスクマネジメント</span><span class="code">5.2</span></a>
+<a href="/chapter5/5-3-monitoring-control/"><span>テストモニタリング、テストコントロールとテスト完了</span><span class="code">5.3</span></a>
+<a href="/chapter5/5-4-configuration-management/"><span>構成管理</span><span class="code">5.4</span></a>
+<a href="/chapter5/5-5-defect-management/"><span>欠陥マネジメント</span><span class="code">5.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter6/">第6章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter6/6-1-tool-support/"><span>テストのためのツールによる支援</span><span class="code">6.1</span></a>
+<a href="/chapter6/6-2-automation-pros-cons/"><span>テスト自動化の利点とリスク</span><span class="code">6.2</span></a>
+</div></div>
+</nav>
+<div class="nav-end">
+<a class="nav-link" href="/glossary/">用語集</a>
+<a class="nav-link" href="/quiz/">模擬試験</a>
+</div>
+</div></header>
+<main><div class="page">
+<div class="crumbs">
+      <a href="/">トップ</a><span>/</span>
+      <a href="/chapter1/">第1章</a><span>/</span>
+      <span>1.2 なぜテストが必要か?</span>
+    </div>
+<div class="pagehead">
+<div class="eyebrow">第1章 — テストの基礎</div>
+<h1>1.2 なぜテストが必要か?</h1>
+<p class="lead">テストがプロジェクトの成功にどう貢献するか、QAとの違い、エラー・欠陥・故障の関係を学ぶ。</p>
+<div class="meta-row">
+<span class="k-badge k1">K1・記憶 ×1</span>
+<span class="k-badge k2">K2・理解 ×2</span>
+</div></div>
+<ul class="objectives">
+<li class="obj">
+          <span class="obj-code">FL-1.2.1</span>
+          <span class="k-badge k2">K2・理解</span>
+          <span class="obj-text">テストが必要な理由を例示する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-1.2.2</span>
+          <span class="k-badge k1">K1・記憶</span>
+          <span class="obj-text">テストと品質保証の関係を想起する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-1.2.3</span>
+          <span class="k-badge k2">K2・理解</span>
+          <span class="obj-text">根本原因、エラー、欠陥、故障を区別する。</span>
+        </li>
+</ul>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">1.2.1</span>
+            <h2>成功に対するテストの貢献</h2>
+            <span class="k-badge k2">K2・理解</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>テストが必要な理由を例示する。</div>
+<p>テストは欠陥を低コストで検出する手段であり、検出した欠陥を取り除くことで間接的に品質向上に貢献する。また開発の各段階で品質を直接測定する手段にもなり、リリース判定など意思決定を支える。さらに、実際のユーザー利用に近い視点を開発に取り込む役割や、契約・法的要件・規制基準への適合を確認する役割も果たす。</p>
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">1.2.2</span>
+            <h2>テストと品質保証(QA)</h2>
+            <span class="k-badge k1">K1・記憶</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>テストと品質保証の関係を想起する。</div>
+<p>「テスト」と「QA(品質保証)」は混同されがちだが同じではない。テストは品質コントロール(QC)、つまりプロダクト指向で欠陥を是正するアプローチの一形態。一方QAは、プロセスそのものを改善するプロセス指向・予防的なアプローチで、開発・テスト双方のプロセスに適用され、プロジェクトの全員が責任を持つ。テストの結果はQC(欠陥修正)にもQA(プロセス改善のフィードバック)にも使われる。</p>
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">1.2.3</span>
+            <h2>エラー、欠陥、故障、および根本原因</h2>
+            <span class="k-badge k2">K2・理解</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>根本原因、エラー、欠陥、故障を区別する。</div>
+<p>人はエラー(誤り)を起こす。エラーが欠陥(フォールト/バグ)を生み、欠陥が実行されると故障につながることがある。ただしすべての欠陥が必ず故障を起こすわけではなく、特定条件下でのみ顕在化するものもある。故障の原因はエラー・欠陥だけでなく、放射線や電磁波のような環境条件でも起こり得る。根本原因とは問題が生じる根底の理由であり、根本原因分析によって特定し、取り除くことで再発防止につなげる。</p>
+
+<div style="overflow-x:auto;margin:20px 0;">
+<svg viewBox="0 0 700 140" xmlns="http://www.w3.org/2000/svg"
+     style="width:100%;max-width:700px;font-family:'Noto Sans JP',sans-serif;">
+  <!-- ボックス定義 -->
+  <!-- エラー -->
+  <rect x="10" y="30" width="130" height="60" rx="8"
+        fill="#EAF0F8" stroke="#2E5FA3" stroke-width="1.5"/>
+  <text x="75" y="55" text-anchor="middle" font-size="13" font-weight="700" fill="#2E5FA3">エラー</text>
+  <text x="75" y="73" text-anchor="middle" font-size="10" fill="#5B6670">(人間の誤り)</text>
+
+  <!-- 矢印1 -->
+  <line x1="142" y1="60" x2="182" y2="60" stroke="#4C7E6C" stroke-width="2"/>
+  <polygon points="182,55 195,60 182,65" fill="#4C7E6C"/>
+  <text x="168" y="50" text-anchor="middle" font-size="9" fill="#5B6670">生み出す</text>
+
+  <!-- 欠陥 -->
+  <rect x="198" y="30" width="150" height="60" rx="8"
+        fill="#E7F1EC" stroke="#4C7E6C" stroke-width="1.5"/>
+  <text x="273" y="55" text-anchor="middle" font-size="13" font-weight="700" fill="#4C7E6C">欠陥(バグ)</text>
+  <text x="273" y="73" text-anchor="middle" font-size="10" fill="#5B6670">(フォールト)</text>
+
+  <!-- 矢印2 -->
+  <line x1="350" y1="60" x2="390" y2="60" stroke="#B4582C" stroke-width="2"/>
+  <polygon points="390,55 403,60 390,65" fill="#B4582C"/>
+  <text x="376" y="50" text-anchor="middle" font-size="9" fill="#5B6670">引き起こす</text>
+  <text x="376" y="78" text-anchor="middle" font-size="9" fill="#9B4219">(こともある)</text>
+
+  <!-- 故障 -->
+  <rect x="406" y="30" width="130" height="60" rx="8"
+        fill="#FBEAE0" stroke="#B4582C" stroke-width="1.5"/>
+  <text x="471" y="55" text-anchor="middle" font-size="13" font-weight="700" fill="#B4582C">故障</text>
+  <text x="471" y="73" text-anchor="middle" font-size="10" fill="#5B6670">(外から見える問題)</text>
+
+  <!-- 根本原因ラベル -->
+  <rect x="550" y="25" width="140" height="70" rx="8"
+        fill="#F6F8F6" stroke="#c0cfc8" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="620" y="47" text-anchor="middle" font-size="11" font-weight="700" fill="#4C7E6C">根本原因</text>
+  <text x="620" y="63" text-anchor="middle" font-size="9" fill="#5B6670">問題が起きる</text>
+  <text x="620" y="77" text-anchor="middle" font-size="9" fill="#5B6670">根底の理由</text>
+  <!-- 根本原因 → エラー矢印 -->
+  <path d="M550,60 Q530,100 75,100 Q75,92 75,90" stroke="#9B9B9B" stroke-width="1.2"
+        stroke-dasharray="5,3" fill="none"/>
+  <polygon points="71,92 75,80 79,92" fill="#9B9B9B"/>
+  <text x="310" y="118" text-anchor="middle" font-size="9" fill="#9B9B9B">根本原因分析で特定 → 取り除くことで再発防止</text>
+</svg>
+</div>
+
+</div>
+<div class="topic">
+<h2 style="color:var(--ink);font-size:1.05rem;">この章のキーワード</h2>
+<div class="keywords">
+<span class="keyword">カバレッジ</span>
+<span class="keyword">デバッグ</span>
+<span class="keyword">欠陥</span>
+<span class="keyword">エラー</span>
+<span class="keyword">故障</span>
+<span class="keyword">品質</span>
+<span class="keyword">品質保証</span>
+<span class="keyword">根本原因</span>
+<span class="keyword">テスト分析</span>
+<span class="keyword">テストベース</span>
+<span class="keyword">テストケース</span>
+<span class="keyword">テスト完了</span>
+<span class="keyword">テスト条件</span>
+<span class="keyword">テストコントロール</span>
+<span class="keyword">テストデータ</span>
+<span class="keyword">テスト設計</span>
+<span class="keyword">テスト実行</span>
+<span class="keyword">テスト実装</span>
+<span class="keyword">テストモニタリング</span>
+<span class="keyword">テスト対象</span>
+<span class="keyword">テスト目的</span>
+<span class="keyword">テスト計画</span>
+<span class="keyword">テストプロシジャー</span>
+<span class="keyword">テスト結果</span>
+<span class="keyword">テスト</span>
+<span class="keyword">テストウェア</span>
+<span class="keyword">妥当性確認</span>
+<span class="keyword">検証</span>
+</div></div>
+<div class="summary-box"><h3>この節のまとめ</h3><ul>
+<li><strong style="color:var(--teal-dark);">1.2.1</strong>　テストが必要な理由を例示する。</li>
+<li><strong style="color:var(--teal-dark);">1.2.2</strong>　テストと品質保証の関係を想起する。</li>
+<li><strong style="color:var(--teal-dark);">1.2.3</strong>　根本原因、エラー、欠陥、故障を区別する。</li>
+</ul></div>
+<div class="quiz-cta">
+        <div class="lbl">理解度を確認しよう — 1.2 なぜテストが必要か? の演習問題</div>
+        <a class="btn" href="/quiz/chapter1/#1-2-why-testing">演習問題を解く →</a>
+      </div>
+<div class="pager"><div><a href="/chapter1/1-1-what-is-testing/"><span class="dir">← 前の節</span>1.1 テストとは何か?</a></div><div><a href="/chapter1/1-3-testing-principles/" style="text-align:right;"><span class="dir">次の節 →</span>1.3 テストの原則</a></div></div>
+</div></main>
+<footer class="site-foot">
+      JSTQB FL 学習帳 — JSTQB® Foundation Level シラバス(Version 2023V4.0.J02)をもとにした学習用サイト。<br>
+      本サイトの解説文はシラバスを初学者向けに要約・再構成した独自コンテンツです。
+    </footer>
+
+</body>
+</html>

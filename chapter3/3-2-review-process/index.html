@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3.2 フィードバックとレビュープロセス｜JSTQB FL 学習帳</title>
+<meta name="description" content="レビューの汎用プロセス、役割と責務、レビューの種類、成功要因を整理する。">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="topbar"><div class="topbar-inner">
+<a class="brand" href="/"><span class="mark">📘</span><span>JSTQB FL 学習帳<small>FOUNDATION LEVEL STUDY GUIDE</small></span></a>
+<nav class="nav">
+<div class="nav-item">
+<a class="nav-link" href="/chapter1/">第1章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter1/1-1-what-is-testing/"><span>テストとは何か?</span><span class="code">1.1</span></a>
+<a href="/chapter1/1-2-why-testing/"><span>なぜテストが必要か?</span><span class="code">1.2</span></a>
+<a href="/chapter1/1-3-testing-principles/"><span>テストの原則</span><span class="code">1.3</span></a>
+<a href="/chapter1/1-4-test-activities/"><span>テスト活動、テストウェア、そして役割</span><span class="code">1.4</span></a>
+<a href="/chapter1/1-5-essential-skills/"><span>テストに必要不可欠なスキルとよい実践例</span><span class="code">1.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter2/">第2章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter2/2-1-sdlc-context/"><span>コンテキストに応じたソフトウェア開発ライフサイクルでのテスト</span><span class="code">2.1</span></a>
+<a href="/chapter2/2-2-test-levels-types/"><span>テストレベルとテストタイプ</span><span class="code">2.2</span></a>
+<a href="/chapter2/2-3-maintenance-testing/"><span>メンテナンス(保守)テスト</span><span class="code">2.3</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter3/">第3章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter3/3-1-static-testing-basics/"><span>静的テストの基本</span><span class="code">3.1</span></a>
+<a href="/chapter3/3-2-review-process/"><span>フィードバックとレビュープロセス</span><span class="code">3.2</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter4/">第4章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter4/4-1-technique-overview/"><span>テスト技法の概要</span><span class="code">4.1</span></a>
+<a href="/chapter4/4-2-black-box/"><span>ブラックボックステスト技法</span><span class="code">4.2</span></a>
+<a href="/chapter4/4-3-white-box/"><span>ホワイトボックステスト技法</span><span class="code">4.3</span></a>
+<a href="/chapter4/4-4-experience-based/"><span>経験ベースのテスト技法</span><span class="code">4.4</span></a>
+<a href="/chapter4/4-5-collaboration-based/"><span>コラボレーションベースのテストアプローチ</span><span class="code">4.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter5/">第5章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter5/5-1-test-planning/"><span>テスト計画</span><span class="code">5.1</span></a>
+<a href="/chapter5/5-2-risk-management/"><span>リスクマネジメント</span><span class="code">5.2</span></a>
+<a href="/chapter5/5-3-monitoring-control/"><span>テストモニタリング、テストコントロールとテスト完了</span><span class="code">5.3</span></a>
+<a href="/chapter5/5-4-configuration-management/"><span>構成管理</span><span class="code">5.4</span></a>
+<a href="/chapter5/5-5-defect-management/"><span>欠陥マネジメント</span><span class="code">5.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter6/">第6章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter6/6-1-tool-support/"><span>テストのためのツールによる支援</span><span class="code">6.1</span></a>
+<a href="/chapter6/6-2-automation-pros-cons/"><span>テスト自動化の利点とリスク</span><span class="code">6.2</span></a>
+</div></div>
+</nav>
+<div class="nav-end">
+<a class="nav-link" href="/glossary/">用語集</a>
+<a class="nav-link" href="/quiz/">模擬試験</a>
+</div>
+</div></header>
+<main><div class="page">
+<div class="crumbs">
+      <a href="/">トップ</a><span>/</span>
+      <a href="/chapter3/">第3章</a><span>/</span>
+      <span>3.2 フィードバックとレビュープロセス</span>
+    </div>
+<div class="pagehead">
+<div class="eyebrow">第3章 — 静的テスト</div>
+<h1>3.2 フィードバックとレビュープロセス</h1>
+<p class="lead">レビューの汎用プロセス、役割と責務、レビューの種類、成功要因を整理する。</p>
+<div class="meta-row">
+<span class="k-badge k1">K1・記憶 ×3</span>
+<span class="k-badge k2">K2・理解 ×2</span>
+</div></div>
+<ul class="objectives">
+<li class="obj">
+          <span class="obj-code">FL-3.2.1</span>
+          <span class="k-badge k1">K1・記憶</span>
+          <span class="obj-text">早期かつ頻繁なステークホルダーからのフィードバックの利点を識別する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-3.2.2</span>
+          <span class="k-badge k2">K2・理解</span>
+          <span class="obj-text">レビュープロセスの活動を要約する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-3.2.3</span>
+          <span class="k-badge k1">K1・記憶</span>
+          <span class="obj-text">レビューの際に、主要な役割にどのような責務が割り当てられているかを想起する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-3.2.4</span>
+          <span class="k-badge k2">K2・理解</span>
+          <span class="obj-text">さまざまなレビュー種別を比較、そして対比する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-3.2.5</span>
+          <span class="k-badge k1">K1・記憶</span>
+          <span class="obj-text">レビューの成功に貢献する要因を想起する。</span>
+        </li>
+</ul>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">3.2.1</span>
+            <h2>早期かつ頻繁なステークホルダーからのフィードバックの利点</h2>
+            <span class="k-badge k1">K1・記憶</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>早期かつ頻繁なステークホルダーからのフィードバックの利点を識別する。</div>
+<p>ステークホルダーの関与が少ないと、開発中のプロダクトが当初のビジョンとずれてしまい、手直し・納期遅延・責任のなすり合いにつながりかねない。SDLCを通じた頻繁なフィードバックは要件の誤解を防ぎ、変更を早期に取り込み、チームが最大の価値とリスク低減に集中する助けになる。</p>
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">3.2.2</span>
+            <h2>作業成果物のレビュープロセス</h2>
+            <span class="k-badge k2">K2・理解</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>レビュープロセスの活動を要約する。</div>
+<ul>
+<li>計画 — 目的・対象・品質特性・終了基準などレビューの範囲を定める</li>
+<li>レビューの立ち上げ — 参加者がアクセスでき役割を理解している状態を作る</li>
+<li>個々人のレビュー — 各レビューアが不正・推奨・質問を識別する</li>
+<li>共有と分析 — 識別した不正を議論しステータスとアクションを決める</li>
+<li>修正と報告 — 欠陥レポートを作成し終了基準に達したら受け入れる</li>
+</ul>
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">3.2.3</span>
+            <h2>レビューでの役割と責務</h2>
+            <span class="k-badge k1">K1・記憶</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>レビューの際に、主要な役割にどのような責務が割り当てられているかを想起する。</div>
+<ul>
+<li>マネージャー — 何をレビューするか決めリソースを提供</li>
+<li>作成者 — 対象成果物を作成・修正</li>
+<li>モデレーター(ファシリテーター) — ミーティングを効果的に運営</li>
+<li>書記(記録係) — 不正やレビュー情報を記録</li>
+<li>レビューア — 実際にレビューを行う</li>
+<li>レビューリーダー — 参加者・日時・場所などレビュー全体の責任を負う</li>
+</ul>
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">3.2.4</span>
+            <h2>レビュー種別</h2>
+            <span class="k-badge k2">K2・理解</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>さまざまなレビュー種別を比較、そして対比する。</div>
+<ul>
+<li>非形式的レビュー — 定義プロセスに従わず文書化アウトプットも不要。不正検出が主目的</li>
+<li>ウォークスルー — 作成者主導。教育・合意形成・新しいアイデア創出など目的が幅広い</li>
+<li>テクニカルレビュー — 技術的に適格なレビューアが参加しモデレーターが主導。技術的合意形成も目的</li>
+<li>インスペクション — 最も形式的。汎用プロセスに完全に従い、不正の最大数発見を狙う。作成者はレビューリーダー/書記になれない</li>
+</ul>
+
+<div style="overflow-x:auto;margin:20px 0;">
+<table style="width:100%;border-collapse:collapse;font-size:.86rem;">
+<thead>
+<tr style="background:var(--teal-dark);color:#fff;">
+  <th style="padding:10px 12px;">種別</th>
+  <th style="padding:10px 12px;">形式度</th>
+  <th style="padding:10px 12px;">主導者</th>
+  <th style="padding:10px 12px;">主な目的</th>
+  <th style="padding:10px 12px;">特記</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#fff;border-bottom:1px solid var(--rule);">
+  <td style="padding:10px 12px;font-weight:700;">非形式的レビュー</td>
+  <td style="padding:10px 12px;text-align:center;"><span style="color:#4C7E6C;">●○○○</span></td>
+  <td style="padding:10px 12px;color:var(--ink-soft);">特になし</td>
+  <td style="padding:10px 12px;color:var(--ink-soft);">不正の検出</td>
+  <td style="padding:10px 12px;color:var(--ink-soft);">文書化不要</td>
+</tr>
+<tr style="background:var(--bg-soft);border-bottom:1px solid var(--rule);">
+  <td style="padding:10px 12px;font-weight:700;">ウォークスルー</td>
+  <td style="padding:10px 12px;text-align:center;"><span style="color:#4C7E6C;">●●○○</span></td>
+  <td style="padding:10px 12px;color:var(--ink-soft);">作成者</td>
+  <td style="padding:10px 12px;color:var(--ink-soft);">教育・合意・不正検出など</td>
+  <td style="padding:10px 12px;color:var(--ink-soft);">事前準備は任意</td>
+</tr>
+<tr style="background:#fff;border-bottom:1px solid var(--rule);">
+  <td style="padding:10px 12px;font-weight:700;">テクニカルレビュー</td>
+  <td style="padding:10px 12px;text-align:center;"><span style="color:#4C7E6C;">●●●○</span></td>
+  <td style="padding:10px 12px;color:var(--ink-soft);">モデレーター</td>
+  <td style="padding:10px 12px;color:var(--ink-soft);">技術的合意・不正検出</td>
+  <td style="padding:10px 12px;color:var(--ink-soft);">技術的に適格なレビューア</td>
+</tr>
+<tr style="background:var(--bg-soft);">
+  <td style="padding:10px 12px;font-weight:700;">インスペクション</td>
+  <td style="padding:10px 12px;text-align:center;"><span style="color:#4C7E6C;">●●●●</span></td>
+  <td style="padding:10px 12px;color:var(--ink-soft);">レビューリーダー</td>
+  <td style="padding:10px 12px;color:var(--ink-soft);">不正の最大数発見</td>
+  <td style="padding:10px 12px;color:var(--ink-soft);">作成者はリーダー/書記不可</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">3.2.5</span>
+            <h2>レビューの成功要因</h2>
+            <span class="k-badge k1">K1・記憶</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>レビューの成功に貢献する要因を想起する。</div>
+<ul>
+<li>明確な目的と測定可能な終了基準を定義する(参加者評価を目的にしない)</li>
+<li>目的に合わせて適切なレビュー種別を選ぶ</li>
+<li>対象を小さく分割して集中力を保つ</li>
+<li>作成者へ建設的なフィードバックを返す</li>
+<li>参加者に十分な準備時間を与える</li>
+<li>マネジメントの支援を得る</li>
+<li>レビューを組織文化として定着させる</li>
+</ul>
+</div>
+<div class="topic">
+<h2 style="color:var(--ink);font-size:1.05rem;">この章のキーワード</h2>
+<div class="keywords">
+<span class="keyword">不正</span>
+<span class="keyword">動的テスト</span>
+<span class="keyword">形式的レビュー</span>
+<span class="keyword">非形式的レビュー</span>
+<span class="keyword">インスペクション</span>
+<span class="keyword">レビュー</span>
+<span class="keyword">静的解析</span>
+<span class="keyword">静的テスト</span>
+<span class="keyword">テクニカルレビュー</span>
+<span class="keyword">ウォークスルー</span>
+</div></div>
+<div class="summary-box"><h3>この節のまとめ</h3><ul>
+<li><strong style="color:var(--teal-dark);">3.2.1</strong>　早期かつ頻繁なステークホルダーからのフィードバックの利点を識別する。</li>
+<li><strong style="color:var(--teal-dark);">3.2.2</strong>　レビュープロセスの活動を要約する。</li>
+<li><strong style="color:var(--teal-dark);">3.2.3</strong>　レビューの際に、主要な役割にどのような責務が割り当てられているかを想起する。</li>
+<li><strong style="color:var(--teal-dark);">3.2.4</strong>　さまざまなレビュー種別を比較、そして対比する。</li>
+<li><strong style="color:var(--teal-dark);">3.2.5</strong>　レビューの成功に貢献する要因を想起する。</li>
+</ul></div>
+<div class="quiz-cta">
+        <div class="lbl">理解度を確認しよう — 3.2 フィードバックとレビュープロセス の演習問題</div>
+        <a class="btn" href="/quiz/chapter3/#3-2-review-process">演習問題を解く →</a>
+      </div>
+<div class="pager"><div><a href="/chapter3/3-1-static-testing-basics/"><span class="dir">← 前の節</span>3.1 静的テストの基本</a></div><div><a href="/chapter4/4-1-technique-overview/" style="text-align:right;"><span class="dir">次の節 →</span>4.1 テスト技法の概要</a></div></div>
+</div></main>
+<footer class="site-foot">
+      JSTQB FL 学習帳 — JSTQB® Foundation Level シラバス(Version 2023V4.0.J02)をもとにした学習用サイト。<br>
+      本サイトの解説文はシラバスを初学者向けに要約・再構成した独自コンテンツです。
+    </footer>
+
+</body>
+</html>
