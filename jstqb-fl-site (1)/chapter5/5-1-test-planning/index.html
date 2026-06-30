@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5.1 テスト計画｜JSTQB FL 学習帳</title>
+<meta name="description" content="テスト計画書の目的、開始/終了基準、見積り技法、優先順位付け、テストピラミッドと四象限という、計画にまつわる7項目。">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="topbar"><div class="topbar-inner">
+<a class="brand" href="/"><span class="mark">📘</span><span>JSTQB FL 学習帳<small>FOUNDATION LEVEL STUDY GUIDE</small></span></a>
+<nav class="nav">
+<div class="nav-item">
+<a class="nav-link" href="/chapter1/">第1章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter1/1-1-what-is-testing/"><span>テストとは何か?</span><span class="code">1.1</span></a>
+<a class="" href="/chapter1/1-2-why-testing/"><span>なぜテストが必要か?</span><span class="code">1.2</span></a>
+<a class="" href="/chapter1/1-3-testing-principles/"><span>テストの原則</span><span class="code">1.3</span></a>
+<a class="" href="/chapter1/1-4-test-activities/"><span>テスト活動、テストウェア、そして役割</span><span class="code">1.4</span></a>
+<a class="" href="/chapter1/1-5-essential-skills/"><span>テストに必要不可欠なスキルとよい実践例</span><span class="code">1.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter2/">第2章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter2/2-1-sdlc-context/"><span>コンテキストに応じたソフトウェア開発ライフサイクルでのテスト</span><span class="code">2.1</span></a>
+<a class="" href="/chapter2/2-2-test-levels-types/"><span>テストレベルとテストタイプ</span><span class="code">2.2</span></a>
+<a class="" href="/chapter2/2-3-maintenance-testing/"><span>メンテナンス(保守)テスト</span><span class="code">2.3</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter3/">第3章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter3/3-1-static-testing-basics/"><span>静的テストの基本</span><span class="code">3.1</span></a>
+<a class="" href="/chapter3/3-2-review-process/"><span>フィードバックとレビュープロセス</span><span class="code">3.2</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter4/">第4章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter4/4-1-technique-overview/"><span>テスト技法の概要</span><span class="code">4.1</span></a>
+<a class="" href="/chapter4/4-2-black-box/"><span>ブラックボックステスト技法</span><span class="code">4.2</span></a>
+<a class="" href="/chapter4/4-3-white-box/"><span>ホワイトボックステスト技法</span><span class="code">4.3</span></a>
+<a class="" href="/chapter4/4-4-experience-based/"><span>経験ベースのテスト技法</span><span class="code">4.4</span></a>
+<a class="" href="/chapter4/4-5-collaboration-based/"><span>コラボレーションベースのテストアプローチ</span><span class="code">4.5</span></a>
+</div></div>
+<div class="nav-item is-active">
+<a class="nav-link" href="/chapter5/">第5章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="current" href="/chapter5/5-1-test-planning/"><span>テスト計画</span><span class="code">5.1</span></a>
+<a class="" href="/chapter5/5-2-risk-management/"><span>リスクマネジメント</span><span class="code">5.2</span></a>
+<a class="" href="/chapter5/5-3-monitoring-control/"><span>テストモニタリング、テストコントロールとテスト完了</span><span class="code">5.3</span></a>
+<a class="" href="/chapter5/5-4-configuration-management/"><span>構成管理</span><span class="code">5.4</span></a>
+<a class="" href="/chapter5/5-5-defect-management/"><span>欠陥マネジメント</span><span class="code">5.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter6/">第6章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter6/6-1-tool-support/"><span>テストのためのツールによる支援</span><span class="code">6.1</span></a>
+<a class="" href="/chapter6/6-2-automation-pros-cons/"><span>テスト自動化の利点とリスク</span><span class="code">6.2</span></a>
+</div></div>
+</nav>
+<div class="nav-end">
+<a class="nav-link" href="/glossary/">用語集</a>
+<a class="nav-link" href="/quiz/">演習問題</a>
+<a class="nav-link" href="/guide/">使い方</a>
+</div>
+</div></header>
+<main><div class="page">
+<div class="crumbs">
+      <a href="/">トップ</a><span>/</span>
+      <a href="/chapter5/">第5章</a><span>/</span>
+      <span>5.1 テスト計画</span>
+    </div>
+<div class="pagehead">
+<div class="eyebrow">第5章 — テスト活動のマネジメント</div>
+<h1>5.1 テスト計画</h1>
+<p class="lead">テスト計画書の目的、開始/終了基準、見積り技法、優先順位付け、テストピラミッドと四象限という、計画にまつわる7項目。</p>
+<div class="meta-row">
+<span class="k-badge k1">K1・記憶 ×2</span>
+<span class="k-badge k2">K2・理解 ×3</span>
+<span class="k-badge k3">K3・適用 ×2</span>
+</div></div>
+<ul class="objectives">
+<li class="obj">
+          <span class="obj-code">FL-5.1.1</span>
+          <span class="k-badge k2">K2・理解</span>
+          <span class="obj-text">テスト計画書の目的と内容を例示する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-5.1.2</span>
+          <span class="k-badge k1">K1・記憶</span>
+          <span class="obj-text">テスト担当者がイテレーション計画やリリース計画にどのような価値を付加するかを認識する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-5.1.3</span>
+          <span class="k-badge k2">K2・理解</span>
+          <span class="obj-text">開始基準と終了基準を比較、そして対比する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-5.1.4</span>
+          <span class="k-badge k3">K3・適用</span>
+          <span class="obj-text">見積り技法を用いて、必要なテスト工数を算出する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-5.1.5</span>
+          <span class="k-badge k3">K3・適用</span>
+          <span class="obj-text">テストケースの優先順位付けを適用する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-5.1.6</span>
+          <span class="k-badge k1">K1・記憶</span>
+          <span class="obj-text">テストピラミッドの概念を想起する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-5.1.7</span>
+          <span class="k-badge k2">K2・理解</span>
+          <span class="obj-text">テストの四象限とテストレベルやテストタイプとの関係を要約する。</span>
+        </li>
+</ul>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">5.1.1</span>
+            <h2>テスト計画書の目的と内容</h2>
+            <span class="k-badge k2">K2・理解</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>テスト計画書の目的と内容を例示する。</div>
+<p>テスト計画書はテスト目的達成の手段とスケジュールを文書化し、コミュニケーション手段や、組織のテストポリシー遵守を示す役割も持つ。典型的な内容はテストの概要・前提と制約・ステークホルダー・コミュニケーション・リスクレジスター・テストアプローチ(テストレベル/タイプ/技法/開始終了基準など)・予算とスケジュール。</p>
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">5.1.2</span>
+            <h2>イテレーションとリリース計画に対するテスト担当者の貢献</h2>
+            <span class="k-badge k1">K1・記憶</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>テスト担当者がイテレーション計画やリリース計画にどのような価値を付加するかを認識する。</div>
+<p>リリース計画ではテスト可能なユーザーストーリーと受け入れ基準の作成、リスク分析、工数見積り、テストアプローチの決定に貢献する。イテレーション計画では、より詳細なリスク分析、試験性の判断、ユーザーストーリーをテストタスクへ分解し、各タスクの工数を見積もる。</p>
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">5.1.3</span>
+            <h2>開始基準と終了基準</h2>
+            <span class="k-badge k2">K2・理解</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>開始基準と終了基準を比較、そして対比する。</div>
+<p>開始基準は活動を始めるための事前条件(リソースやテストウェアの可用性など)。満たされないまま始めると、後でより困難・高コスト・高リスクになりやすい。終了基準は活動の完了を宣言するために何を達成すべきかを定義するもので、カバレッジレベルや未解決欠陥数などの「徹底度の測定」と「完了基準」がある。時間切れ・予算切れも、リスクを受け入れたうえでなら妥当な終了基準になりうる。アジャイルでは終了基準を「完了の定義」、開始基準を「準備完了の定義」と呼ぶことが多い。</p>
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">5.1.4</span>
+            <h2>見積り技法</h2>
+            <span class="k-badge k3">K3・適用</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>見積り技法を用いて、必要なテスト工数を算出する。</div>
+<ul>
+<li>比率に基づく見積り — 過去プロジェクトの開発:テスト工数比率を新規プロジェクトに適用する</li>
+<li>外挿 — プロジェクト初期のデータから残り作業量を数学的に概算する。イテレーティブ開発に適する</li>
+<li>ワイドバンドデルファイ — 専門家が個別に見積り、合意が得られるまで議論と再見積りを繰り返す(プランニングポーカーもこの一種)</li>
+<li>三点見積り — 楽観値a・最頻値m・悲観値bからE=(a+4m+b)/6で算出し、誤差SD=(b-a)/6も求められる</li>
+</ul>
+
+<div style="overflow-x:auto;margin:20px 0;">
+<p style="font-size:.85rem;color:var(--ink-soft);margin-bottom:10px;">▼ 三点見積りの計算例　E = (a + 4m + b) / 6　／　SD = (b − a) / 6</p>
+<table style="border-collapse:collapse;font-size:.87rem;min-width:480px;">
+<thead>
+<tr style="background:var(--teal-dark);color:#fff;">
+  <th style="padding:9px 14px;">タスク</th>
+  <th style="padding:9px 14px;text-align:center;">楽観値 a</th>
+  <th style="padding:9px 14px;text-align:center;">最頻値 m</th>
+  <th style="padding:9px 14px;text-align:center;">悲観値 b</th>
+  <th style="padding:9px 14px;text-align:center;">推定値 E</th>
+  <th style="padding:9px 14px;text-align:center;">SD</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#fff;border-bottom:1px solid var(--rule);">
+  <td style="padding:9px 14px;">テスト計画書作成</td>
+  <td style="padding:9px 14px;text-align:center;">4h</td>
+  <td style="padding:9px 14px;text-align:center;">7h</td>
+  <td style="padding:9px 14px;text-align:center;">16h</td>
+  <td style="padding:9px 14px;text-align:center;font-weight:700;color:var(--blue);">8h</td>
+  <td style="padding:9px 14px;text-align:center;color:var(--ink-soft);">±2h</td>
+</tr>
+<tr style="background:var(--bg-soft);border-bottom:1px solid var(--rule);">
+  <td style="padding:9px 14px;">テストケース設計</td>
+  <td style="padding:9px 14px;text-align:center;">6h</td>
+  <td style="padding:9px 14px;text-align:center;">9h</td>
+  <td style="padding:9px 14px;text-align:center;">18h</td>
+  <td style="padding:9px 14px;text-align:center;font-weight:700;color:var(--blue);">10h</td>
+  <td style="padding:9px 14px;text-align:center;color:var(--ink-soft);">±2h</td>
+</tr>
+<tr style="background:#fff;">
+  <td style="padding:9px 14px;">テスト実行</td>
+  <td style="padding:9px 14px;text-align:center;">3h</td>
+  <td style="padding:9px 14px;text-align:center;">6h</td>
+  <td style="padding:9px 14px;text-align:center;">12h</td>
+  <td style="padding:9px 14px;text-align:center;font-weight:700;color:var(--blue);">6.5h</td>
+  <td style="padding:9px 14px;text-align:center;color:var(--ink-soft);">±1.5h</td>
+</tr>
+</tbody>
+</table>
+<p style="font-size:.82rem;color:var(--ink-soft);margin-top:8px;">例: a=4, m=7, b=16 → E=(4+28+16)/6=<strong>8</strong>, SD=(16-4)/6=<strong>2</strong></p>
+</div>
+
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">5.1.5</span>
+            <h2>テストケースの優先順位付け</h2>
+            <span class="k-badge k3">K3・適用</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>テストケースの優先順位付けを適用する。</div>
+<p>依存関係がある場合は優先度どおりに進められないこともあり、リソース(ツール・環境・人)の可用性も実行順に影響する。</p>
+<ul>
+<li>リスクに基づく優先順位付け — 重要なリスクをカバーするテストを先に実行</li>
+<li>カバレッジベースの優先順位付け — 高いカバレッジを達成するテストを先に実行</li>
+<li>要件に基づく優先順位付け — 優先度の高い要件に紐づくテストを先に実行</li>
+</ul>
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">5.1.6</span>
+            <h2>テストピラミッド</h2>
+            <span class="k-badge k1">K1・記憶</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>テストピラミッドの概念を想起する。</div>
+<p>テストの粒度ごとに自動化やゴールが異なることを示すモデル。下層(コンポーネントテストなど)ほど小さく速く分離されたテストが多数必要で、上層(エンドツーエンドテスト)ほど粗く遅いテストが少数で済む。オリジナルモデルは「ユニットテスト/サービステスト/UIテスト」の3層。</p>
+
+<div style="text-align:center;margin:20px 0;">
+<svg viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg"
+     style="width:100%;max-width:480px;font-family:'Noto Sans JP',sans-serif;">
+  <!-- 最上層: UIテスト -->
+  <polygon points="250,20 340,90 160,90" fill="#FBEAE0" stroke="#B4582C" stroke-width="1.5"/>
+  <text x="250" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#B4582C">E2Eテスト</text>
+  <text x="250" y="78" text-anchor="middle" font-size="10" fill="#B4582C">少数・遅い</text>
+  <!-- 中層: 統合テスト -->
+  <polygon points="160,90 340,90 390,160 110,160" fill="#EAF0F8" stroke="#2E5FA3" stroke-width="1.5"/>
+  <text x="250" y="125" text-anchor="middle" font-size="12" font-weight="700" fill="#2E5FA3">統合テスト</text>
+  <text x="250" y="143" text-anchor="middle" font-size="10" fill="#2E5FA3">中程度・やや速い</text>
+  <!-- 下層: ユニットテスト -->
+  <polygon points="110,160 390,160 460,230 40,230" fill="#E7F1EC" stroke="#4C7E6C" stroke-width="1.5"/>
+  <text x="250" y="196" text-anchor="middle" font-size="12" font-weight="700" fill="#4C7E6C">コンポーネントテスト(ユニットテスト)</text>
+  <text x="250" y="214" text-anchor="middle" font-size="10" fill="#4C7E6C">多数・小さく・速い</text>
+  <!-- 矢印ラベル -->
+  <text x="478" y="90" font-size="10" fill="#5B6670">少ない</text>
+  <text x="478" y="165" font-size="10" fill="#5B6670">↕</text>
+  <text x="478" y="230" font-size="10" fill="#5B6670">多い</text>
+  <text x="10" y="90" font-size="10" fill="#5B6670" text-anchor="middle">粗い</text>
+  <text x="10" y="165" font-size="10" fill="#5B6670" text-anchor="middle">↕</text>
+  <text x="10" y="230" font-size="10" fill="#5B6670" text-anchor="middle">細かい</text>
+</svg>
+<p style="font-size:.82rem;color:var(--ink-soft);">下層ほど細かく速いテストが多数、上層ほど粗く遅いテストが少数</p>
+</div>
+
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">5.1.7</span>
+            <h2>テストの四象限</h2>
+            <span class="k-badge k2">K2・理解</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>テストの四象限とテストレベルやテストタイプとの関係を要約する。</div>
+<ul>
+<li>第一象限(技術指向・チーム支援) — コンポーネントテスト/コンポーネント統合テスト。CIに組み込み自動化</li>
+<li>第二象限(ビジネス指向・チーム支援) — 機能テスト・実例・ユーザーストーリーテストなど。受け入れ基準をチェック</li>
+<li>第三象限(ビジネス指向・プロダクト批評) — 探索的テスト・使用性テスト・UAT。多くは手動</li>
+<li>第四象限(技術指向・プロダクト批評) — スモークテスト・非機能テスト(使用性除く)。しばしば自動化</li>
+</ul>
+
+<div style="overflow-x:auto;margin:20px 0;">
+<svg viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg"
+     style="width:100%;max-width:520px;font-family:'Noto Sans JP',sans-serif;">
+  <!-- 軸 -->
+  <line x1="260" y1="20" x2="260" y2="300" stroke="#c0cfc8" stroke-width="1.5"/>
+  <line x1="20" y1="160" x2="500" y2="160" stroke="#c0cfc8" stroke-width="1.5"/>
+  <!-- 軸ラベル -->
+  <text x="260" y="14" text-anchor="middle" font-size="11" fill="#5B6670">ビジネス指向</text>
+  <text x="260" y="316" text-anchor="middle" font-size="11" fill="#5B6670">技術指向</text>
+  <text x="16" y="164" font-size="11" fill="#5B6670">チームを支援</text>
+  <text x="430" y="164" font-size="11" fill="#5B6670">プロダクトを批評</text>
+
+  <!-- Q2 上左 -->
+  <rect x="22" y="22" width="234" height="134" rx="8" fill="#EAF0F8" stroke="#2E5FA3" stroke-width="1.2"/>
+  <text x="30" y="44" font-size="11" font-weight="700" fill="#2E5FA3">第二象限</text>
+  <text x="30" y="62" font-size="10" fill="#2E5FA3">機能テスト / 実例</text>
+  <text x="30" y="78" font-size="10" fill="#2E5FA3">ユーザーストーリーテスト</text>
+  <text x="30" y="94" font-size="10" fill="#2E5FA3">API テスト / プロトタイプ</text>
+  <text x="30" y="114" font-size="10" fill="#5B6670">手動または自動</text>
+
+  <!-- Q3 上右 -->
+  <rect x="264" y="22" width="234" height="134" rx="8" fill="#FBEAE0" stroke="#B4582C" stroke-width="1.2"/>
+  <text x="272" y="44" font-size="11" font-weight="700" fill="#B4582C">第三象限</text>
+  <text x="272" y="62" font-size="10" fill="#B4582C">探索的テスト</text>
+  <text x="272" y="78" font-size="10" fill="#B4582C">使用性テスト</text>
+  <text x="272" y="94" font-size="10" fill="#B4582C">ユーザー受け入れテスト</text>
+  <text x="272" y="114" font-size="10" fill="#5B6670">多くは手動・ユーザー志向</text>
+
+  <!-- Q1 下左 -->
+  <rect x="22" y="164" width="234" height="134" rx="8" fill="#E7F1EC" stroke="#4C7E6C" stroke-width="1.2"/>
+  <text x="30" y="186" font-size="11" font-weight="700" fill="#4C7E6C">第一象限</text>
+  <text x="30" y="204" font-size="10" fill="#4C7E6C">コンポーネントテスト</text>
+  <text x="30" y="220" font-size="10" fill="#4C7E6C">コンポーネント統合テスト</text>
+  <text x="30" y="240" font-size="10" fill="#5B6670">自動化してCIに組み込む</text>
+
+  <!-- Q4 下右 -->
+  <rect x="264" y="164" width="234" height="134" rx="8" fill="#F6F8F6" stroke="#5B6670" stroke-width="1.2"/>
+  <text x="272" y="186" font-size="11" font-weight="700" fill="#5B6670">第四象限</text>
+  <text x="272" y="204" font-size="10" fill="#5B6670">スモークテスト</text>
+  <text x="272" y="220" font-size="10" fill="#5B6670">非機能テスト(使用性除く)</text>
+  <text x="272" y="240" font-size="10" fill="#5B6670">しばしば自動化</text>
+</svg>
+</div>
+
+</div>
+<div class="topic">
+<h2 style="color:var(--ink);font-size:1.05rem;">この章のキーワード</h2>
+<div class="keywords">
+<span class="keyword">欠陥マネジメント</span>
+<span class="keyword">欠陥レポート</span>
+<span class="keyword">開始基準</span>
+<span class="keyword">終了基準</span>
+<span class="keyword">プロダクトリスク</span>
+<span class="keyword">プロジェクトリスク</span>
+<span class="keyword">リスク</span>
+<span class="keyword">リスク分析</span>
+<span class="keyword">リスクアセスメント</span>
+<span class="keyword">リスクコントロール</span>
+<span class="keyword">リスク識別</span>
+<span class="keyword">リスクレベル</span>
+<span class="keyword">リスクマネジメント</span>
+<span class="keyword">リスク軽減</span>
+<span class="keyword">リスクモニタリング</span>
+<span class="keyword">リスクベースドテスト</span>
+<span class="keyword">テストアプローチ</span>
+<span class="keyword">テスト完了レポート</span>
+<span class="keyword">テストコントロール</span>
+<span class="keyword">テストモニタリング</span>
+<span class="keyword">テスト計画書</span>
+<span class="keyword">テスト計画</span>
+<span class="keyword">テスト進捗レポート</span>
+<span class="keyword">テストピラミッド</span>
+<span class="keyword">テストの四象限</span>
+</div></div>
+<div class="summary-box"><h3>この節のまとめ</h3><ul>
+<li><strong style="color:var(--teal-dark);">5.1.1</strong>　テスト計画書の目的と内容を例示する。</li>
+<li><strong style="color:var(--teal-dark);">5.1.2</strong>　テスト担当者がイテレーション計画やリリース計画にどのような価値を付加するかを認識する。</li>
+<li><strong style="color:var(--teal-dark);">5.1.3</strong>　開始基準と終了基準を比較、そして対比する。</li>
+<li><strong style="color:var(--teal-dark);">5.1.4</strong>　見積り技法を用いて、必要なテスト工数を算出する。</li>
+<li><strong style="color:var(--teal-dark);">5.1.5</strong>　テストケースの優先順位付けを適用する。</li>
+<li><strong style="color:var(--teal-dark);">5.1.6</strong>　テストピラミッドの概念を想起する。</li>
+<li><strong style="color:var(--teal-dark);">5.1.7</strong>　テストの四象限とテストレベルやテストタイプとの関係を要約する。</li>
+</ul></div>
+<div class="quiz-cta">
+        <div class="lbl">理解度を確認しよう — 5.1 テスト計画 の演習問題</div>
+        <a class="btn" href="/quiz/chapter5/#5-1-test-planning">演習問題を解く →</a>
+      </div>
+<div class="pager"><div><a href="/chapter4/4-5-collaboration-based/"><span class="dir">← 前の節</span>4.5 コラボレーションベースのテストアプローチ</a></div><div><a href="/chapter5/5-2-risk-management/" style="text-align:right;"><span class="dir">次の節 →</span>5.2 リスクマネジメント</a></div></div>
+<footer class="site-foot">
+      JSTQB FL 学習帳 — JSTQB® Foundation Level シラバス(Version 2023V4.0.J02)をもとにした学習用サイト。<br>
+      本サイトの解説文はシラバスを初学者向けに要約・再構成した独自コンテンツです。
+    </footer>
+</div></main>
+
+
+</body></html>

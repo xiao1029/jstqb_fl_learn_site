@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2.1 コンテキストに応じたソフトウェア開発ライフサイクルでのテスト｜JSTQB FL 学習帳</title>
+<meta name="description" content="開発モデルの違いがテストの進め方をどう変えるか、DevOpsやシフトレフトとの関係を学ぶ。">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="topbar"><div class="topbar-inner">
+<a class="brand" href="/"><span class="mark">📘</span><span>JSTQB FL 学習帳<small>FOUNDATION LEVEL STUDY GUIDE</small></span></a>
+<nav class="nav">
+<div class="nav-item">
+<a class="nav-link" href="/chapter1/">第1章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter1/1-1-what-is-testing/"><span>テストとは何か?</span><span class="code">1.1</span></a>
+<a class="" href="/chapter1/1-2-why-testing/"><span>なぜテストが必要か?</span><span class="code">1.2</span></a>
+<a class="" href="/chapter1/1-3-testing-principles/"><span>テストの原則</span><span class="code">1.3</span></a>
+<a class="" href="/chapter1/1-4-test-activities/"><span>テスト活動、テストウェア、そして役割</span><span class="code">1.4</span></a>
+<a class="" href="/chapter1/1-5-essential-skills/"><span>テストに必要不可欠なスキルとよい実践例</span><span class="code">1.5</span></a>
+</div></div>
+<div class="nav-item is-active">
+<a class="nav-link" href="/chapter2/">第2章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="current" href="/chapter2/2-1-sdlc-context/"><span>コンテキストに応じたソフトウェア開発ライフサイクルでのテスト</span><span class="code">2.1</span></a>
+<a class="" href="/chapter2/2-2-test-levels-types/"><span>テストレベルとテストタイプ</span><span class="code">2.2</span></a>
+<a class="" href="/chapter2/2-3-maintenance-testing/"><span>メンテナンス(保守)テスト</span><span class="code">2.3</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter3/">第3章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter3/3-1-static-testing-basics/"><span>静的テストの基本</span><span class="code">3.1</span></a>
+<a class="" href="/chapter3/3-2-review-process/"><span>フィードバックとレビュープロセス</span><span class="code">3.2</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter4/">第4章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter4/4-1-technique-overview/"><span>テスト技法の概要</span><span class="code">4.1</span></a>
+<a class="" href="/chapter4/4-2-black-box/"><span>ブラックボックステスト技法</span><span class="code">4.2</span></a>
+<a class="" href="/chapter4/4-3-white-box/"><span>ホワイトボックステスト技法</span><span class="code">4.3</span></a>
+<a class="" href="/chapter4/4-4-experience-based/"><span>経験ベースのテスト技法</span><span class="code">4.4</span></a>
+<a class="" href="/chapter4/4-5-collaboration-based/"><span>コラボレーションベースのテストアプローチ</span><span class="code">4.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter5/">第5章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter5/5-1-test-planning/"><span>テスト計画</span><span class="code">5.1</span></a>
+<a class="" href="/chapter5/5-2-risk-management/"><span>リスクマネジメント</span><span class="code">5.2</span></a>
+<a class="" href="/chapter5/5-3-monitoring-control/"><span>テストモニタリング、テストコントロールとテスト完了</span><span class="code">5.3</span></a>
+<a class="" href="/chapter5/5-4-configuration-management/"><span>構成管理</span><span class="code">5.4</span></a>
+<a class="" href="/chapter5/5-5-defect-management/"><span>欠陥マネジメント</span><span class="code">5.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter6/">第6章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter6/6-1-tool-support/"><span>テストのためのツールによる支援</span><span class="code">6.1</span></a>
+<a class="" href="/chapter6/6-2-automation-pros-cons/"><span>テスト自動化の利点とリスク</span><span class="code">6.2</span></a>
+</div></div>
+</nav>
+<div class="nav-end">
+<a class="nav-link" href="/glossary/">用語集</a>
+<a class="nav-link" href="/quiz/">演習問題</a>
+<a class="nav-link" href="/guide/">使い方</a>
+</div>
+</div></header>
+<main><div class="page">
+<div class="crumbs">
+      <a href="/">トップ</a><span>/</span>
+      <a href="/chapter2/">第2章</a><span>/</span>
+      <span>2.1 コンテキストに応じたソフトウェア開発ライフサイクルでのテスト</span>
+    </div>
+<div class="pagehead">
+<div class="eyebrow">第2章 — ソフトウェア開発ライフサイクル全体を通してのテスト</div>
+<h1>2.1 コンテキストに応じたソフトウェア開発ライフサイクルでのテスト</h1>
+<p class="lead">開発モデルの違いがテストの進め方をどう変えるか、DevOpsやシフトレフトとの関係を学ぶ。</p>
+<div class="meta-row">
+<span class="k-badge k1">K1・記憶 ×2</span>
+<span class="k-badge k2">K2・理解 ×4</span>
+</div></div>
+<ul class="objectives">
+<li class="obj">
+          <span class="obj-code">FL-2.1.1</span>
+          <span class="k-badge k2">K2・理解</span>
+          <span class="obj-text">選択したソフトウェア開発ライフサイクルがテストに与える影響を説明する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-2.1.2</span>
+          <span class="k-badge k1">K1・記憶</span>
+          <span class="obj-text">全ソフトウェア開発ライフサイクルに適用するよいテストの実践例を想起する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-2.1.3</span>
+          <span class="k-badge k1">K1・記憶</span>
+          <span class="obj-text">開発でのテストファーストアプローチの事例を想起する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-2.1.4</span>
+          <span class="k-badge k2">K2・理解</span>
+          <span class="obj-text">DevOpsがテストに与える影響について要約する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-2.1.5</span>
+          <span class="k-badge k2">K2・理解</span>
+          <span class="obj-text">シフトレフトアプローチを説明する。</span>
+        </li>
+<li class="obj">
+          <span class="obj-code">FL-2.1.6</span>
+          <span class="k-badge k2">K2・理解</span>
+          <span class="obj-text">プロセス改善の仕組みとして、ふりかえりをどのように利用できるかを説明する。</span>
+        </li>
+</ul>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">2.1.1</span>
+            <h2>ソフトウェア開発ライフサイクルがテストに与える影響</h2>
+            <span class="k-badge k2">K2・理解</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>選択したソフトウェア開発ライフサイクルがテストに与える影響を説明する。</div>
+<p>SDLCの選び方は、テスト活動の範囲・タイミング、ドキュメントの詳細度、テスト技法の選択、自動化の範囲、担当者の役割と責任に影響する。シーケンシャルなモデルでは初期は要件レビューやテスト分析・設計が中心で動的テストは後半になりがちだが、イテレーティブ/インクリメンタルなモデルでは各イテレーションで静的・動的テストの両方が走り、頻繁なリグレッションテストと迅速なフィードバックが求められる。アジャイル開発ではドキュメントを軽量化し自動化を重視する傾向がある。</p>
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">2.1.2</span>
+            <h2>ソフトウェア開発ライフサイクルとよい実践例</h2>
+            <span class="k-badge k1">K1・記憶</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>全ソフトウェア開発ライフサイクルに適用するよいテストの実践例を想起する。</div>
+<ul>
+<li>各開発活動に対応するテスト活動を用意する</li>
+<li>各テストレベルに重複を避けた固有の目的を持たせる</li>
+<li>テスト分析・設計を対応する開発フェーズの間に開始する(早期テスト)</li>
+<li>作業成果物のドラフトができた時点でレビューに関与する(シフトレフト)</li>
+</ul>
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">2.1.3</span>
+            <h2>テストが主導するソフトウェア開発</h2>
+            <span class="k-badge k1">K1・記憶</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>開発でのテストファーストアプローチの事例を想起する。</div>
+<p>TDD(テスト駆動開発)はテストケースでコーディングを導き、テストを先に書いて満たすコードを書きリファクタリングする。ATDD(受け入れテスト駆動開発)は受け入れ基準からテストを導き出し、開発前にテストを書く。BDD(振る舞い駆動開発)はGiven/When/Then形式など自然言語でテストケースを表現し実行可能なテストへ変換する。いずれも早期テストの原則とシフトレフトを体現するアプローチ。</p>
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">2.1.4</span>
+            <h2>DevOpsとテスト</h2>
+            <span class="k-badge k2">K2・理解</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>DevOpsがテストに与える影響について要約する。</div>
+<p>DevOpsは開発(テスト含む)と運用が協働する組織的アプローチ。CI/CDを通じて迅速なフィードバック、シフトレフトの促進、安定したテスト環境の自動構築、自動化されたリグレッションテストによるリスク最小化といった利点がある一方、パイプラインの構築・保守やツール導入のコスト、自動テストの維持の難しさといった課題もある。手動テスト(特にユーザー視点)が完全に不要になるわけではない。</p>
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">2.1.5</span>
+            <h2>シフトレフトアプローチ</h2>
+            <span class="k-badge k2">K2・理解</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>シフトレフトアプローチを説明する。</div>
+<p>テストをできるだけ早い段階で実施しようという考え方(早期テストの原則の別名)。仕様書のレビュー、コード実装前のテストケース作成、CI/CDによる自動コンポーネントテスト、動的テスト前の静的解析、コンポーネントレベルからの非機能テスト着手などが具体例。後半のテストを軽視するという意味ではなく、初期コストはかかるが後工程の労力削減が期待できる。</p>
+</div>
+<div class="topic">
+<div class="topic-head">
+            <span class="topic-num">2.1.6</span>
+            <h2>ふりかえりとプロセス改善</h2>
+            <span class="k-badge k2">K2・理解</span>
+          </div>
+<div class="callout"><strong>この項の学習目的</strong>プロセス改善の仕組みとして、ふりかえりをどのように利用できるかを説明する。</div>
+<p>プロジェクトやイテレーションの節目で「何がうまくいったか」「何を改善できるか」「どう取り入れるか」を議論する場。結果はテスト完了レポートに記録され、継続的改善のためにフォローアップが重要となる。テストの有効性向上、テストウェアの品質向上、チームの結束、開発とテストの連携強化などの効果が期待できる。</p>
+</div>
+<div class="topic">
+<h2 style="color:var(--ink);font-size:1.05rem;">この章のキーワード</h2>
+<div class="keywords">
+<span class="keyword">受け入れテスト</span>
+<span class="keyword">ブラックボックステスト</span>
+<span class="keyword">コンポーネント統合テスト</span>
+<span class="keyword">コンポーネントテスト</span>
+<span class="keyword">確認テスト</span>
+<span class="keyword">機能テスト</span>
+<span class="keyword">統合テスト</span>
+<span class="keyword">メンテナンステスト</span>
+<span class="keyword">非機能テスト</span>
+<span class="keyword">リグレッションテスト</span>
+<span class="keyword">シフトレフト</span>
+<span class="keyword">システム統合テスト</span>
+<span class="keyword">システムテスト</span>
+<span class="keyword">テストレベル</span>
+<span class="keyword">テスト対象</span>
+<span class="keyword">テストタイプ</span>
+<span class="keyword">ホワイトボックステスト</span>
+</div></div>
+<div class="summary-box"><h3>この節のまとめ</h3><ul>
+<li><strong style="color:var(--teal-dark);">2.1.1</strong>　選択したソフトウェア開発ライフサイクルがテストに与える影響を説明する。</li>
+<li><strong style="color:var(--teal-dark);">2.1.2</strong>　全ソフトウェア開発ライフサイクルに適用するよいテストの実践例を想起する。</li>
+<li><strong style="color:var(--teal-dark);">2.1.3</strong>　開発でのテストファーストアプローチの事例を想起する。</li>
+<li><strong style="color:var(--teal-dark);">2.1.4</strong>　DevOpsがテストに与える影響について要約する。</li>
+<li><strong style="color:var(--teal-dark);">2.1.5</strong>　シフトレフトアプローチを説明する。</li>
+<li><strong style="color:var(--teal-dark);">2.1.6</strong>　プロセス改善の仕組みとして、ふりかえりをどのように利用できるかを説明する。</li>
+</ul></div>
+<div class="quiz-cta">
+        <div class="lbl">理解度を確認しよう — 2.1 コンテキストに応じたソフトウェア開発ライフサイクルでのテスト の演習問題</div>
+        <a class="btn" href="/quiz/chapter2/#2-1-sdlc-context">演習問題を解く →</a>
+      </div>
+<div class="pager"><div><a href="/chapter1/1-5-essential-skills/"><span class="dir">← 前の節</span>1.5 テストに必要不可欠なスキルとよい実践例</a></div><div><a href="/chapter2/2-2-test-levels-types/" style="text-align:right;"><span class="dir">次の節 →</span>2.2 テストレベルとテストタイプ</a></div></div>
+<footer class="site-foot">
+      JSTQB FL 学習帳 — JSTQB® Foundation Level シラバス(Version 2023V4.0.J02)をもとにした学習用サイト。<br>
+      本サイトの解説文はシラバスを初学者向けに要約・再構成した独自コンテンツです。
+    </footer>
+</div></main>
+
+
+</body></html>
