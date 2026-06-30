@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>演習問題 第2章｜JSTQB FL 学習帳</title>
+<meta name="description" content="第2章 ソフトウェア開発ライフサイクル全体を通してのテストの演習問題">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="topbar"><div class="topbar-inner">
+<a class="brand" href="/"><span class="mark">📘</span><span>JSTQB FL 学習帳<small>FOUNDATION LEVEL STUDY GUIDE</small></span></a>
+<nav class="nav">
+<div class="nav-item">
+<a class="nav-link" href="/chapter1/">第1章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter1/1-1-what-is-testing/"><span>テストとは何か?</span><span class="code">1.1</span></a>
+<a class="" href="/chapter1/1-2-why-testing/"><span>なぜテストが必要か?</span><span class="code">1.2</span></a>
+<a class="" href="/chapter1/1-3-testing-principles/"><span>テストの原則</span><span class="code">1.3</span></a>
+<a class="" href="/chapter1/1-4-test-activities/"><span>テスト活動、テストウェア、そして役割</span><span class="code">1.4</span></a>
+<a class="" href="/chapter1/1-5-essential-skills/"><span>テストに必要不可欠なスキルとよい実践例</span><span class="code">1.5</span></a>
+</div></div>
+<div class="nav-item is-active">
+<a class="nav-link" href="/chapter2/">第2章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter2/2-1-sdlc-context/"><span>コンテキストに応じたソフトウェア開発ライフサイクルでのテスト</span><span class="code">2.1</span></a>
+<a class="" href="/chapter2/2-2-test-levels-types/"><span>テストレベルとテストタイプ</span><span class="code">2.2</span></a>
+<a class="" href="/chapter2/2-3-maintenance-testing/"><span>メンテナンス(保守)テスト</span><span class="code">2.3</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter3/">第3章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter3/3-1-static-testing-basics/"><span>静的テストの基本</span><span class="code">3.1</span></a>
+<a class="" href="/chapter3/3-2-review-process/"><span>フィードバックとレビュープロセス</span><span class="code">3.2</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter4/">第4章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter4/4-1-technique-overview/"><span>テスト技法の概要</span><span class="code">4.1</span></a>
+<a class="" href="/chapter4/4-2-black-box/"><span>ブラックボックステスト技法</span><span class="code">4.2</span></a>
+<a class="" href="/chapter4/4-3-white-box/"><span>ホワイトボックステスト技法</span><span class="code">4.3</span></a>
+<a class="" href="/chapter4/4-4-experience-based/"><span>経験ベースのテスト技法</span><span class="code">4.4</span></a>
+<a class="" href="/chapter4/4-5-collaboration-based/"><span>コラボレーションベースのテストアプローチ</span><span class="code">4.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter5/">第5章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter5/5-1-test-planning/"><span>テスト計画</span><span class="code">5.1</span></a>
+<a class="" href="/chapter5/5-2-risk-management/"><span>リスクマネジメント</span><span class="code">5.2</span></a>
+<a class="" href="/chapter5/5-3-monitoring-control/"><span>テストモニタリング、テストコントロールとテスト完了</span><span class="code">5.3</span></a>
+<a class="" href="/chapter5/5-4-configuration-management/"><span>構成管理</span><span class="code">5.4</span></a>
+<a class="" href="/chapter5/5-5-defect-management/"><span>欠陥マネジメント</span><span class="code">5.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter6/">第6章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter6/6-1-tool-support/"><span>テストのためのツールによる支援</span><span class="code">6.1</span></a>
+<a class="" href="/chapter6/6-2-automation-pros-cons/"><span>テスト自動化の利点とリスク</span><span class="code">6.2</span></a>
+</div></div>
+</nav>
+<div class="nav-end">
+<a class="nav-link" href="/glossary/">用語集</a>
+<a class="nav-link" href="/quiz/">演習問題</a>
+<a class="nav-link" href="/guide/">使い方</a>
+</div>
+</div></header>
+<main><div class="page">
+<div class="crumbs"><a href="/">トップ</a><span>/</span><a href="/quiz/">演習問題</a><span>/</span><span>第2章</span></div>
+<div class="pagehead">
+<div class="eyebrow">演習問題 ／ 第2章</div>
+<h1>ソフトウェア開発ライフサイクル全体を通してのテスト</h1>
+<div class="meta-row"><span class="k-badge k2">全12問</span></div>
+</div>
+<script>
+function showAnswer(id){
+  document.getElementById("ans-"+id).style.display="block";
+  document.getElementById("btn-"+id).style.display="none";
+}
+function checkOption(qid, selected, correct){
+  var opts = document.querySelectorAll(".opt-"+qid);
+  opts.forEach(function(el, i){
+    if(i===correct){ el.classList.add("correct"); }
+    else if(i===selected && i!==correct){ el.classList.add("wrong"); }
+  });
+  document.getElementById("exp-"+qid).style.display="block";
+  document.getElementById("btn-"+qid).style.display="none";
+}
+</script>
+<style>
+.quiz-block{background:var(--bg-soft);border:1px solid var(--rule);border-radius:10px;padding:22px 24px;margin-bottom:22px;}
+.quiz-block .q-head{display:flex;gap:10px;align-items:baseline;margin-bottom:14px;}
+.quiz-block .q-num{font-weight:900;color:var(--teal-dark);font-size:1.05rem;white-space:nowrap;}
+.quiz-block .q-text{font-size:.97rem;line-height:1.75;}
+.opt-btn{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--rule);border-radius:8px;padding:10px 14px;margin-bottom:8px;font-size:.9rem;cursor:pointer;transition:background .1s,border-color .1s;font-family:inherit;}
+.opt-btn:hover{background:var(--blue-soft);border-color:var(--blue);}
+.opt-btn.correct{background:#E7F1EC!important;border-color:var(--k2)!important;color:var(--k2);font-weight:700;}
+.opt-btn.wrong{background:var(--k3-bg)!important;border-color:var(--k3)!important;color:var(--k3);}
+.exp-box{background:var(--blue-soft);border-left:4px solid var(--blue);border-radius:6px;padding:12px 16px;font-size:.88rem;margin-top:12px;display:none;}
+.exp-box strong{display:block;font-size:.72rem;color:var(--blue);margin-bottom:4px;}
+.section-label{font-size:.82rem;font-weight:700;color:var(--teal-dark);margin:36px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--rule);}
+.show-btn{background:none;border:1px dashed var(--rule-strong, #ccc);border-radius:20px;padding:7px 18px;font-size:.82rem;cursor:pointer;color:var(--ink-soft);margin-top:10px;font-family:inherit;}
+.show-btn:hover{border-color:var(--teal);color:var(--teal-dark);}
+</style>
+<div class="section-label" id="2-1-sdlc-context">2.1 コンテキストに応じたソフトウェア開発ライフサイクルでのテスト　<span style="font-weight:400;color:var(--ink-soft);">(6問)</span></div>
+<div class="quiz-block">
+              <div class="q-head">
+                <span class="q-num">Q1</span>
+                <span class="k-badge k2">K2・理解</span>
+              </div>
+              <div class="q-text">アジャイル開発がテストに与える影響として正しいものはどれか？</div>
+              <div style="margin-top:14px;"><button class="opt-btn opt-q221sdlccontext0" onclick="checkOption('q221sdlccontext0',0,1)">ウォーターフォールモデルと同様に動的テストはSDLCの後半のみで実施する</button>
+<button class="opt-btn opt-q221sdlccontext0" onclick="checkOption('q221sdlccontext0',1,1)">文書化を軽量化し、リグレッションテストを容易にするテスト自動化を重視する傾向がある</button>
+<button class="opt-btn opt-q221sdlccontext0" onclick="checkOption('q221sdlccontext0',2,1)">テスト計画書を詳細に作成してから開発を始める</button>
+<button class="opt-btn opt-q221sdlccontext0" onclick="checkOption('q221sdlccontext0',3,1)">手動テストのみを使用する</button>
+</div>
+              <div class="exp-box" id="exp-q221sdlccontext0"><strong>解説</strong>アジャイル開発では変更が頻繁に起こることを前提とし、文書化の軽量化とリグレッションテストのための自動化充実が好まれる。手動テストは経験ベースのテスト技法を中心に行われることが多い。</div>
+            </div>
+<div class="quiz-block">
+              <div class="q-head">
+                <span class="q-num">Q2</span>
+                <span class="k-badge k1">K1・記憶</span>
+              </div>
+              <div class="q-text">全SDLCモデルに共通するよいテストの実践例として正しいものはどれか？</div>
+              <div style="margin-top:14px;"><button class="opt-btn opt-q221sdlccontext1" onclick="checkOption('q221sdlccontext1',0,1)">テストはSDLC後半にのみ実施する</button>
+<button class="opt-btn opt-q221sdlccontext1" onclick="checkOption('q221sdlccontext1',1,1)">各開発活動に対応するテスト活動を設け、異なるテストレベルに固有の目的を持たせる</button>
+<button class="opt-btn opt-q221sdlccontext1" onclick="checkOption('q221sdlccontext1',2,1)">テスト担当者は要件レビューには参加しない</button>
+<button class="opt-btn opt-q221sdlccontext1" onclick="checkOption('q221sdlccontext1',3,1)">テスト自動化はプロジェクト終了後に導入する</button>
+</div>
+              <div class="exp-box" id="exp-q221sdlccontext1"><strong>解説</strong>SDLCモデルに関わらず、各開発活動に対応するテスト活動を持ち、テストレベルごとに固有の目的を持たせることが良い実践例。また、作業成果物のドラフトができたらすぐレビューに参加することも重要。</div>
+            </div>
+<div class="quiz-block">
+              <div class="q-head">
+                <span class="q-num">Q3</span>
+                <span class="k-badge k1">K1・記憶</span>
+              </div>
+              <div class="q-text">TDD・ATDD・BDDに共通する特徴として正しいものはどれか？</div>
+              <div style="margin-top:14px;"><button class="opt-btn opt-q221sdlccontext2" onclick="checkOption('q221sdlccontext2',0,1)">コードを書いた後にテストケースを作成する</button>
+<button class="opt-btn opt-q221sdlccontext2" onclick="checkOption('q221sdlccontext2',1,1)">いずれもコードを書く前にテストケースを定義するテストファーストアプローチである</button>
+<button class="opt-btn opt-q221sdlccontext2" onclick="checkOption('q221sdlccontext2',2,1)">ウォーターフォールモデルでのみ使用する</button>
+<button class="opt-btn opt-q221sdlccontext2" onclick="checkOption('q221sdlccontext2',3,1)">テストを自動化しない</button>
+</div>
+              <div class="exp-box" id="exp-q221sdlccontext2"><strong>解説</strong>TDD・ATDD・BDDはいずれもコードを書く前にテストケースを定義するテストファーストアプローチ。早期テストの原則とシフトレフトを体現し、イテレーティブ開発モデルをサポートする。</div>
+            </div>
+<div class="quiz-block">
+              <div class="q-head">
+                <span class="q-num">Q4</span>
+                <span class="k-badge k2">K2・理解</span>
+              </div>
+              <div class="q-text">DevOpsのテストへの影響として正しくないものはどれか？</div>
+              <div style="margin-top:14px;"><button class="opt-btn opt-q221sdlccontext3" onclick="checkOption('q221sdlccontext3',0,2)">コード品質への迅速なフィードバックが得られる</button>
+<button class="opt-btn opt-q221sdlccontext3" onclick="checkOption('q221sdlccontext3',1,2)">CIにより高品質なコードのサブミットが促進される</button>
+<button class="opt-btn opt-q221sdlccontext3" onclick="checkOption('q221sdlccontext3',2,2)">手動テストが完全に不要になる</button>
+<button class="opt-btn opt-q221sdlccontext3" onclick="checkOption('q221sdlccontext3',3,2)">自動化されたリグレッションテストによりリグレッションのリスクが最小化される</button>
+</div>
+              <div class="exp-box" id="exp-q221sdlccontext3"><strong>解説</strong>DevOpsにより自動化は進むが、手動テスト(特にユーザー視点)は依然として必要。DevOpsには高レベルの自動テストが前提となるが、それで手動テストがゼロになるわけではない。</div>
+            </div>
+<div class="quiz-block">
+              <div class="q-head">
+                <span class="q-num">Q5</span>
+                <span class="k-badge k2">K2・理解</span>
+              </div>
+              <div class="q-text">シフトレフトアプローチの具体例として正しいものはどれか？</div>
+              <div style="margin-top:14px;"><button class="opt-btn opt-q221sdlccontext4" onclick="checkOption('q221sdlccontext4',0,1)">システムが完成してからまとめて非機能テストを実施する</button>
+<button class="opt-btn opt-q221sdlccontext4" onclick="checkOption('q221sdlccontext4',1,1)">テストをする観点から仕様書をレビューし、コードを書く前にテストケースを書く</button>
+<button class="opt-btn opt-q221sdlccontext4" onclick="checkOption('q221sdlccontext4',2,1)">テストは後工程に集中させることでコストを削減する</button>
+<button class="opt-btn opt-q221sdlccontext4" onclick="checkOption('q221sdlccontext4',3,1)">デプロイ後のフィードバックのみを活用する</button>
+</div>
+              <div class="exp-box" id="exp-q221sdlccontext4"><strong>解説</strong>シフトレフトの具体例には、仕様書のレビュー・コード実装前のテストケース作成・CI/CDによる自動テスト・動的テスト前の静的解析などがある。後工程への集中はシフトレフトの逆。</div>
+            </div>
+<div class="quiz-block">
+              <div class="q-head">
+                <span class="q-num">Q6</span>
+                <span class="k-badge k2">K2・理解</span>
+              </div>
+              <div class="q-text">ふりかえりの目的として正しいものはどれか？</div>
+              <div style="margin-top:14px;"><button class="opt-btn opt-q221sdlccontext5" onclick="checkOption('q221sdlccontext5',0,1)">プロジェクトの失敗の責任者を特定する</button>
+<button class="opt-btn opt-q221sdlccontext5" onclick="checkOption('q221sdlccontext5',1,1)">テストプロセスの問題点と改善点を議論し、継続的改善に役立てる</button>
+<button class="opt-btn opt-q221sdlccontext5" onclick="checkOption('q221sdlccontext5',2,1)">テスト担当者のパフォーマンスを評価する</button>
+<button class="opt-btn opt-q221sdlccontext5" onclick="checkOption('q221sdlccontext5',3,1)">次のプロジェクトの予算を決定する</button>
+</div>
+              <div class="exp-box" id="exp-q221sdlccontext5"><strong>解説</strong>ふりかえりは「何がうまくいったか」「改善できることは何か」「改善点をどう取り入れるか」を議論する場。結果は記録してテスト完了レポートに含め、フォローアップすることが継続的改善に重要。</div>
+            </div>
+<div class="section-label" id="2-2-test-levels-types">2.2 テストレベルとテストタイプ　<span style="font-weight:400;color:var(--ink-soft);">(4問)</span></div>
+<div class="quiz-block">
+              <div class="q-head">
+                <span class="q-num">Q7</span>
+                <span class="k-badge k2">K2・理解</span>
+              </div>
+              <div class="q-text">システムテストとシステム統合テストの違いとして正しいものはどれか？</div>
+              <div style="margin-top:14px;"><button class="opt-btn opt-q222testlevelstypes0" onclick="checkOption('q222testlevelstypes0',0,1)">システムテストはコンポーネント間のインターフェースに焦点を当て、システム統合テストはシステム全体の振る舞いに焦点を当てる</button>
+<button class="opt-btn opt-q222testlevelstypes0" onclick="checkOption('q222testlevelstypes0',1,1)">システムテストはシステム全体の機能・非機能に焦点を当て、システム統合テストは他システム・外部サービスとのインターフェースに焦点を当てる</button>
+<button class="opt-btn opt-q222testlevelstypes0" onclick="checkOption('q222testlevelstypes0',2,1)">両者は同じテストレベルを指す</button>
+<button class="opt-btn opt-q222testlevelstypes0" onclick="checkOption('q222testlevelstypes0',3,1)">システム統合テストはコンポーネント単体を対象とする</button>
+</div>
+              <div class="exp-box" id="exp-q222testlevelstypes0"><strong>解説</strong>システムテストはシステム全体の振る舞い・能力(機能・非機能)に焦点を当てる。システム統合テストはテスト対象システムと他システム・外部サービスとのインターフェースのテストに焦点を当てる。</div>
+            </div>
+<div class="quiz-block">
+              <div class="q-head">
+                <span class="q-num">Q8</span>
+                <span class="k-badge k2">K2・理解</span>
+              </div>
+              <div class="q-text">受け入れテストの主な目的として正しいものはどれか？</div>
+              <div style="margin-top:14px;"><button class="opt-btn opt-q222testlevelstypes1" onclick="checkOption('q222testlevelstypes1',0,1)">コンポーネント間のインターフェースを確認する</button>
+<button class="opt-btn opt-q222testlevelstypes1" onclick="checkOption('q222testlevelstypes1',1,1)">妥当性確認とデプロイの準備ができていることを実証する</button>
+<button class="opt-btn opt-q222testlevelstypes1" onclick="checkOption('q222testlevelstypes1',2,1)">ソースコードの内部構造を確認する</button>
+<button class="opt-btn opt-q222testlevelstypes1" onclick="checkOption('q222testlevelstypes1',3,1)">開発担当者が単独で実施する</button>
+</div>
+              <div class="exp-box" id="exp-q222testlevelstypes1"><strong>解説</strong>受け入れテストは妥当性確認(ユーザーのビジネスニーズを満たすか)とデプロイ準備の実証に焦点を当てる。理想的には想定ユーザーによって実施される。</div>
+            </div>
+<div class="quiz-block">
+              <div class="q-head">
+                <span class="q-num">Q9</span>
+                <span class="k-badge k2">K2・理解</span>
+              </div>
+              <div class="q-text">非機能テストの目的として正しいものはどれか？</div>
+              <div style="margin-top:14px;"><button class="opt-btn opt-q222testlevelstypes2" onclick="checkOption('q222testlevelstypes2',0,1)">システムが「何」をすべきかを評価する</button>
+<button class="opt-btn opt-q222testlevelstypes2" onclick="checkOption('q222testlevelstypes2',1,1)">システムが「どのようにうまく振る舞うか」を評価する</button>
+<button class="opt-btn opt-q222testlevelstypes2" onclick="checkOption('q222testlevelstypes2',2,1)">ソースコードの構造をテストする</button>
+<button class="opt-btn opt-q222testlevelstypes2" onclick="checkOption('q222testlevelstypes2',3,1)">ユーザーストーリーの受け入れ基準を確認する</button>
+</div>
+              <div class="exp-box" id="exp-q222testlevelstypes2"><strong>解説</strong>機能テストは「何をすべきか」を評価するのに対し、非機能テストは「どのようにうまく振る舞うか」を評価する。性能効率性・使用性・セキュリティ・信頼性・保守性・移植性・互換性などがISO/IEC 25010で定義されている。</div>
+            </div>
+<div class="quiz-block">
+              <div class="q-head">
+                <span class="q-num">Q10</span>
+                <span class="k-badge k2">K2・理解</span>
+              </div>
+              <div class="q-text">リグレッションテストについて正しいものはどれか？</div>
+              <div style="margin-top:14px;"><button class="opt-btn opt-q222testlevelstypes3" onclick="checkOption('q222testlevelstypes3',0,1)">欠陥が正しく修正されたかを確認するテストである</button>
+<button class="opt-btn opt-q222testlevelstypes3" onclick="checkOption('q222testlevelstypes3',1,1)">変更によって既存の機能に悪影響が生じていないかを確認するテストであり、自動化の有力候補となる</button>
+<button class="opt-btn opt-q222testlevelstypes3" onclick="checkOption('q222testlevelstypes3',2,1)">コンポーネントを単独でテストするものである</button>
+<button class="opt-btn opt-q222testlevelstypes3" onclick="checkOption('q222testlevelstypes3',3,1)">一度だけ実施すればよい</button>
+</div>
+              <div class="exp-box" id="exp-q222testlevelstypes3"><strong>解説</strong>確認テストが「修正が正しく行われたか」を確認するもの。リグレッションテストは「変更によって悪影響が生じていないか」を確認するもので、繰り返し実行されるため自動化の有力候補。</div>
+            </div>
+<div class="section-label" id="2-3-maintenance-testing">2.3 メンテナンス(保守)テスト　<span style="font-weight:400;color:var(--ink-soft);">(2問)</span></div>
+<div class="quiz-block">
+              <div class="q-head">
+                <span class="q-num">Q11</span>
+                <span class="k-badge k2">K2・理解</span>
+              </div>
+              <div class="q-text">メンテナンステストのきっかけとして正しくないものはどれか？</div>
+              <div style="margin-top:14px;"><button class="opt-btn opt-q223maintenancetesting0" onclick="checkOption('q223maintenancetesting0',0,3)">計画的な機能拡張やホットフィックスといった改良</button>
+<button class="opt-btn opt-q223maintenancetesting0" onclick="checkOption('q223maintenancetesting0',1,3)">プラットフォーム移行などの運用環境の更新</button>
+<button class="opt-btn opt-q223maintenancetesting0" onclick="checkOption('q223maintenancetesting0',2,3)">アプリケーションの廃棄</button>
+<button class="opt-btn opt-q223maintenancetesting0" onclick="checkOption('q223maintenancetesting0',3,3)">新しいシステムの初回リリース</button>
+</div>
+              <div class="exp-box" id="exp-q223maintenancetesting0"><strong>解説</strong>メンテナンステストのきっかけは①改良(機能拡張・修正・ホットフィックス)②運用環境の更新や移行③廃棄の3種類。新システムの初回リリースはメンテナンスではなく初期開発の文脈。</div>
+            </div>
+<div class="quiz-block">
+              <div class="q-head">
+                <span class="q-num">Q12</span>
+                <span class="k-badge k2">K2・理解</span>
+              </div>
+              <div class="q-text">メンテナンステストの範囲に影響する要因として正しいものはどれか？</div>
+              <div style="margin-top:14px;"><button class="opt-btn opt-q223maintenancetesting1" onclick="checkOption('q223maintenancetesting1',0,1)">テスト担当者の人数のみ</button>
+<button class="opt-btn opt-q223maintenancetesting1" onclick="checkOption('q223maintenancetesting1',1,1)">変更のリスクの度合い・既存システムの大きさ・変更の大きさ</button>
+<button class="opt-btn opt-q223maintenancetesting1" onclick="checkOption('q223maintenancetesting1',2,1)">プロジェクトの開始日</button>
+<button class="opt-btn opt-q223maintenancetesting1" onclick="checkOption('q223maintenancetesting1',3,1)">テストツールの種類</button>
+</div>
+              <div class="exp-box" id="exp-q223maintenancetesting1"><strong>解説</strong>メンテナンステストの範囲は①変更のリスクの度合い②既存システムの大きさ③変更の大きさに依存する。変更前の影響度分析も重要な要素。</div>
+            </div>
+<div class="pager"><div><a href="/quiz/chapter1/"><span class="dir">← 前の章</span>第1章の演習問題</a></div><div><a href="/quiz/chapter3/" style="text-align:right;"><span class="dir">次の章 →</span>第3章の演習問題</a></div></div>
+<footer class="site-foot">
+      JSTQB FL 学習帳 — JSTQB® Foundation Level シラバス(Version 2023V4.0.J02)をもとにした学習用サイト。<br>
+      本サイトの解説文はシラバスを初学者向けに要約・再構成した独自コンテンツです。
+    </footer>
+</div></main>
+
+
+</body></html>
