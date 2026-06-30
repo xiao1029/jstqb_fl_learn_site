@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第2章 ソフトウェア開発ライフサイクル全体を通してのテスト｜JSTQB FL 学習帳</title>
+<meta name="description" content="開発の進め方(SDLC)がテストにどう影響するか、5つのテストレベルと4つのテストタイプ、保守テストを扱う。">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="topbar"><div class="topbar-inner">
+<a class="brand" href="/"><span class="mark">📘</span><span>JSTQB FL 学習帳<small>FOUNDATION LEVEL STUDY GUIDE</small></span></a>
+<nav class="nav">
+<div class="nav-item">
+<a class="nav-link" href="/chapter1/">第1章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter1/1-1-what-is-testing/"><span>テストとは何か?</span><span class="code">1.1</span></a>
+<a href="/chapter1/1-2-why-testing/"><span>なぜテストが必要か?</span><span class="code">1.2</span></a>
+<a href="/chapter1/1-3-testing-principles/"><span>テストの原則</span><span class="code">1.3</span></a>
+<a href="/chapter1/1-4-test-activities/"><span>テスト活動、テストウェア、そして役割</span><span class="code">1.4</span></a>
+<a href="/chapter1/1-5-essential-skills/"><span>テストに必要不可欠なスキルとよい実践例</span><span class="code">1.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter2/">第2章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter2/2-1-sdlc-context/"><span>コンテキストに応じたソフトウェア開発ライフサイクルでのテスト</span><span class="code">2.1</span></a>
+<a href="/chapter2/2-2-test-levels-types/"><span>テストレベルとテストタイプ</span><span class="code">2.2</span></a>
+<a href="/chapter2/2-3-maintenance-testing/"><span>メンテナンス(保守)テスト</span><span class="code">2.3</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter3/">第3章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter3/3-1-static-testing-basics/"><span>静的テストの基本</span><span class="code">3.1</span></a>
+<a href="/chapter3/3-2-review-process/"><span>フィードバックとレビュープロセス</span><span class="code">3.2</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter4/">第4章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter4/4-1-technique-overview/"><span>テスト技法の概要</span><span class="code">4.1</span></a>
+<a href="/chapter4/4-2-black-box/"><span>ブラックボックステスト技法</span><span class="code">4.2</span></a>
+<a href="/chapter4/4-3-white-box/"><span>ホワイトボックステスト技法</span><span class="code">4.3</span></a>
+<a href="/chapter4/4-4-experience-based/"><span>経験ベースのテスト技法</span><span class="code">4.4</span></a>
+<a href="/chapter4/4-5-collaboration-based/"><span>コラボレーションベースのテストアプローチ</span><span class="code">4.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter5/">第5章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter5/5-1-test-planning/"><span>テスト計画</span><span class="code">5.1</span></a>
+<a href="/chapter5/5-2-risk-management/"><span>リスクマネジメント</span><span class="code">5.2</span></a>
+<a href="/chapter5/5-3-monitoring-control/"><span>テストモニタリング、テストコントロールとテスト完了</span><span class="code">5.3</span></a>
+<a href="/chapter5/5-4-configuration-management/"><span>構成管理</span><span class="code">5.4</span></a>
+<a href="/chapter5/5-5-defect-management/"><span>欠陥マネジメント</span><span class="code">5.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter6/">第6章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a href="/chapter6/6-1-tool-support/"><span>テストのためのツールによる支援</span><span class="code">6.1</span></a>
+<a href="/chapter6/6-2-automation-pros-cons/"><span>テスト自動化の利点とリスク</span><span class="code">6.2</span></a>
+</div></div>
+</nav>
+<div class="nav-end">
+<a class="nav-link" href="/glossary/">用語集</a>
+<a class="nav-link" href="/quiz/">模擬試験</a>
+</div>
+</div></header>
+<main><div class="page">
+<div class="crumbs"><a href="/">トップ</a><span>/</span><span>第2章</span></div>
+<div class="pagehead">
+<div class="eyebrow">Chapter 2 ／ JSTQB Foundation Level</div>
+<h1>第2章　ソフトウェア開発ライフサイクル全体を通してのテスト</h1>
+<p class="lead">開発の進め方(SDLC)がテストにどう影響するか、5つのテストレベルと4つのテストタイプ、保守テストを扱う。</p>
+<div class="meta-row"><span class="k-badge k2">学習時間 130分</span><span class="k-badge k1">全3節</span></div>
+</div>
+<div class="card-grid">
+<a class="card" href="/chapter2/2-1-sdlc-context/">
+            <div class="card-num">2.1</div>
+            <h3>コンテキストに応じたソフトウェア開発ライフサイクルでのテスト</h3>
+            <p>開発モデルの違いがテストの進め方をどう変えるか、DevOpsやシフトレフトとの関係を学ぶ。</p>
+            <div class="meta"><span class="k-badge k1">K1</span><span class="k-badge k2">K2</span><span style="font-size:.78rem;color:var(--ink-soft);margin-left:auto;">学習目的 6項目</span></div>
+          </a>
+<a class="card" href="/chapter2/2-2-test-levels-types/">
+            <div class="card-num">2.2</div>
+            <h3>テストレベルとテストタイプ</h3>
+            <p>5つのテストレベルと4つのテストタイプ、確認テスト/リグレッションテストの違いを整理する、第2章の核となる節。</p>
+            <div class="meta"><span class="k-badge k2">K2</span><span style="font-size:.78rem;color:var(--ink-soft);margin-left:auto;">学習目的 3項目</span></div>
+          </a>
+<a class="card" href="/chapter2/2-3-maintenance-testing/">
+            <div class="card-num">2.3</div>
+            <h3>メンテナンス(保守)テスト</h3>
+            <p>リリース後のシステムに対する変更を、どうテストするかを学ぶ。</p>
+            <div class="meta"><span class="k-badge k2">K2</span><span style="font-size:.78rem;color:var(--ink-soft);margin-left:auto;">学習目的 1項目</span></div>
+          </a>
+</div>
+<div class="topic" style="margin-top:46px;">
+<h2 style="font-size:1.05rem;color:var(--ink);">この章のキーワード</h2>
+<div class="keywords">
+<span class="keyword">受け入れテスト</span>
+<span class="keyword">ブラックボックステスト</span>
+<span class="keyword">コンポーネント統合テスト</span>
+<span class="keyword">コンポーネントテスト</span>
+<span class="keyword">確認テスト</span>
+<span class="keyword">機能テスト</span>
+<span class="keyword">統合テスト</span>
+<span class="keyword">メンテナンステスト</span>
+<span class="keyword">非機能テスト</span>
+<span class="keyword">リグレッションテスト</span>
+<span class="keyword">シフトレフト</span>
+<span class="keyword">システム統合テスト</span>
+<span class="keyword">システムテスト</span>
+<span class="keyword">テストレベル</span>
+<span class="keyword">テスト対象</span>
+<span class="keyword">テストタイプ</span>
+<span class="keyword">ホワイトボックステスト</span>
+</div></div>
+<div class="pager"><div><a href="/chapter1/"><span class="dir">← 前の章</span>第1章 テストの基礎</a></div><div><a href="/chapter3/" style="text-align:right;"><span class="dir">次の章 →</span>第3章 静的テスト</a></div></div>
+</div></main>
+<footer class="site-foot">
+      JSTQB FL 学習帳 — JSTQB® Foundation Level シラバス(Version 2023V4.0.J02)をもとにした学習用サイト。<br>
+      本サイトの解説文はシラバスを初学者向けに要約・再構成した独自コンテンツです。
+    </footer>
+
+</body>
+</html>
