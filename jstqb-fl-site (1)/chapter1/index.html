@@ -1,24 +1,76 @@
----
-title: "第1章 テストの基礎｜JSTQB FL 学習帳"
----
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>第1章 テストの基礎｜JSTQB FL 学習帳</title>
-<meta name="description" content="「テストとは何か」「なぜ必要か」という土台から、テストの7原則、テスト活動の流れ、必要なスキルまでを扱う、すべて[...]">
+<meta name="description" content="「テストとは何か」「なぜ必要か」という土台から、テストの7原則、テスト活動の流れ、必要なスキルまでを扱う、すべての出発点となる章。">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
-{% include header.html %}
+<header class="topbar"><div class="topbar-inner">
+<a class="brand" href="/"><span class="mark">📘</span><span>JSTQB FL 学習帳<small>FOUNDATION LEVEL STUDY GUIDE</small></span></a>
+<nav class="nav">
+<div class="nav-item is-active">
+<a class="nav-link" href="/chapter1/">第1章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter1/1-1-what-is-testing/"><span>テストとは何か?</span><span class="code">1.1</span></a>
+<a class="" href="/chapter1/1-2-why-testing/"><span>なぜテストが必要か?</span><span class="code">1.2</span></a>
+<a class="" href="/chapter1/1-3-testing-principles/"><span>テストの原則</span><span class="code">1.3</span></a>
+<a class="" href="/chapter1/1-4-test-activities/"><span>テスト活動、テストウェア、そして役割</span><span class="code">1.4</span></a>
+<a class="" href="/chapter1/1-5-essential-skills/"><span>テストに必要不可欠なスキルとよい実践例</span><span class="code">1.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter2/">第2章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter2/2-1-sdlc-context/"><span>コンテキストに応じたソフトウェア開発ライフサイクルでのテスト</span><span class="code">2.1</span></a>
+<a class="" href="/chapter2/2-2-test-levels-types/"><span>テストレベルとテストタイプ</span><span class="code">2.2</span></a>
+<a class="" href="/chapter2/2-3-maintenance-testing/"><span>メンテナンス(保守)テスト</span><span class="code">2.3</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter3/">第3章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter3/3-1-static-testing-basics/"><span>静的テストの基本</span><span class="code">3.1</span></a>
+<a class="" href="/chapter3/3-2-review-process/"><span>フィードバックとレビュープロセス</span><span class="code">3.2</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter4/">第4章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter4/4-1-technique-overview/"><span>テスト技法の概要</span><span class="code">4.1</span></a>
+<a class="" href="/chapter4/4-2-black-box/"><span>ブラックボックステスト技法</span><span class="code">4.2</span></a>
+<a class="" href="/chapter4/4-3-white-box/"><span>ホワイトボックステスト技法</span><span class="code">4.3</span></a>
+<a class="" href="/chapter4/4-4-experience-based/"><span>経験ベースのテスト技法</span><span class="code">4.4</span></a>
+<a class="" href="/chapter4/4-5-collaboration-based/"><span>コラボレーションベースのテストアプローチ</span><span class="code">4.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter5/">第5章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter5/5-1-test-planning/"><span>テスト計画</span><span class="code">5.1</span></a>
+<a class="" href="/chapter5/5-2-risk-management/"><span>リスクマネジメント</span><span class="code">5.2</span></a>
+<a class="" href="/chapter5/5-3-monitoring-control/"><span>テストモニタリング、テストコントロールとテスト完了</span><span class="code">5.3</span></a>
+<a class="" href="/chapter5/5-4-configuration-management/"><span>構成管理</span><span class="code">5.4</span></a>
+<a class="" href="/chapter5/5-5-defect-management/"><span>欠陥マネジメント</span><span class="code">5.5</span></a>
+</div></div>
+<div class="nav-item">
+<a class="nav-link" href="/chapter6/">第6章<span class="caret">▾</span></a>
+<div class="dropdown">
+<a class="" href="/chapter6/6-1-tool-support/"><span>テストのためのツールによる支援</span><span class="code">6.1</span></a>
+<a class="" href="/chapter6/6-2-automation-pros-cons/"><span>テスト自動化の利点とリスク</span><span class="code">6.2</span></a>
+</div></div>
+</nav>
+<div class="nav-end">
+<a class="nav-link" href="/glossary/">用語集</a>
+<a class="nav-link" href="/quiz/">演習問題</a>
+<a class="nav-link" href="/guide/">使い方</a>
+</div>
+</div></header>
 <main><div class="page">
 <div class="crumbs"><a href="/">トップ</a><span>/</span><span>第1章</span></div>
 <div class="pagehead">
 <div class="eyebrow">Chapter 1 ／ JSTQB Foundation Level</div>
 <h1>第1章　テストの基礎</h1>
-<p class="lead">「テストとは何か」「なぜ必要か」という土台から、テストの7原則、テスト活動の流れ、必要なスキルまでを扱う、すべての出発点とな[...]
+<p class="lead">「テストとは何か」「なぜ必要か」という土台から、テストの7原則、テスト活動の流れ、必要なスキルまでを扱う、すべての出発点となる章。</p>
 <div class="meta-row"><span class="k-badge k2">学習時間 180分</span><span class="k-badge k1">全5節</span></div>
 </div>
 <div class="card-grid">
@@ -26,13 +78,13 @@ title: "第1章 テストの基礎｜JSTQB FL 学習帳"
             <div class="card-num">1.1</div>
             <h3>テストとは何か?</h3>
             <p>テストの目的を整理し、「デバッグ」との違いを明確にする節。</p>
-            <div class="meta"><span class="k-badge k1">K1</span><span class="k-badge k2">K2</span><span style="font-size:.78rem;color:var(--ink-soft);margin-left:auto;">学習目的 2項目</span></di[...]
+            <div class="meta"><span class="k-badge k1">K1</span><span class="k-badge k2">K2</span><span style="font-size:.78rem;color:var(--ink-soft);margin-left:auto;">学習目的 2項目</span></div>
           </a>
 <a class="card" href="/chapter1/1-2-why-testing/">
             <div class="card-num">1.2</div>
             <h3>なぜテストが必要か?</h3>
             <p>テストがプロジェクトの成功にどう貢献するか、QAとの違い、エラー・欠陥・故障の関係を学ぶ。</p>
-            <div class="meta"><span class="k-badge k1">K1</span><span class="k-badge k2">K2</span><span style="font-size:.78rem;color:var(--ink-soft);margin-left:auto;">学習目的 3項目</span></di[...]
+            <div class="meta"><span class="k-badge k1">K1</span><span class="k-badge k2">K2</span><span style="font-size:.78rem;color:var(--ink-soft);margin-left:auto;">学習目的 3項目</span></div>
           </a>
 <a class="card" href="/chapter1/1-3-testing-principles/">
             <div class="card-num">1.3</div>
@@ -50,7 +102,7 @@ title: "第1章 テストの基礎｜JSTQB FL 学習帳"
             <div class="card-num">1.5</div>
             <h3>テストに必要不可欠なスキルとよい実践例</h3>
             <p>良いテスト担当者に求められる汎用スキル、チーム全体アプローチ、テストの独立性の長所・短所。</p>
-            <div class="meta"><span class="k-badge k1">K1</span><span class="k-badge k2">K2</span><span style="font-size:.78rem;color:var(--ink-soft);margin-left:auto;">学習目的 3項目</span></di[...]
+            <div class="meta"><span class="k-badge k1">K1</span><span class="k-badge k2">K2</span><span style="font-size:.78rem;color:var(--ink-soft);margin-left:auto;">学習目的 3項目</span></div>
           </a>
 </div>
 <div class="topic" style="margin-top:46px;">
@@ -85,10 +137,10 @@ title: "第1章 テストの基礎｜JSTQB FL 学習帳"
 <span class="keyword">妥当性確認</span>
 <span class="keyword">検証</span>
 </div></div>
-<div class="pager"><div>&nbsp;</div><div><a href="/chapter2/" style="text-align:right;"><span class="dir">次の章 →</span>第2章 ソフトウェア開発ライフサイクル全体を通しての[...]
+<div class="pager"><div>&nbsp;</div><div><a href="/chapter2/" style="text-align:right;"><span class="dir">次の章 →</span>第2章 ソフトウェア開発ライフサイクル全体を通してのテスト</a></div></div>
 <footer class="site-foot">
       JSTQB FL 学習帳 — JSTQB® Foundation Level シラバス(Version 2023V4.0.J02)をもとにした学習用サイト。<br>
-      本サイトの解説文はシラバスを初学者向けに要約・再構成した独自コンテンツです。
+      本サイトの解説文はシラバスを初学者向けに要約・再構成した独自コンテンツです.
     </footer>
 </div></main>
 
