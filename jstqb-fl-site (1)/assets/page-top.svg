@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73.68" height="74.093" viewBox="0 0 73.68 74.093">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5cb7b2"/>
+      <stop offset="1" stop-color="#50add5"/>
+    </linearGradient>
+  </defs>
+  <g id="グループ_6783" data-name="グループ 6783" transform="translate(-1251.881 -4188)">
+    <g id="グループ_3877" data-name="グループ 3877" transform="translate(1251.881 4188)">
+      <circle id="楕円形_6" data-name="楕円形 6" cx="36.84" cy="36.84" r="36.84" transform="translate(0 0.413)" fill="#fff"/>
+      <path id="パス_12" data-name="パス 12" d="M15.93,37.234h-.108l.042.088,13.5,26.3a1.664,1.664,0,0,0,2.961,0l12.055-23.5a1.666,1.666,0,0,1,2.961,0l12.054,23.5a1.663,1.663,0,0,0,2.961.007c3.768-7.346,13.429-26.174,13.5-26.307l.047-.088h-.109a37.587,37.587,0,0,0-59.857,0" transform="translate(-8.945 -22.387)" fill="url(#linear-gradient)"/>
+    </g>
+    <path id="パス_2519" data-name="パス 2519" d="M44.691,69.7C40.973,76.947,31.4,95.6,31.4,95.611l-.009,0h.013a36.93,36.93,0,0,0,29.459,0h.019l-.006,0-13.286-25.9a1.628,1.628,0,0,0-2.9-.009" transform="translate(1242.581 4163.414)" fill="#51aed4"/>
+  </g>
+</svg>
